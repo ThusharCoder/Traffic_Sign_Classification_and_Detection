@@ -1,15 +1,144 @@
-# Image Classification with Handcrafted Features & Classifiers
+# Image Classification with Handcrafted Features & Classical Machine Learning
 
-Traffic sign recognition is an important component of intelligent transportation systems and road safety applications. However, many existing datasets are collected under controlled conditions or from regions with different road environments and traffic sign characteristics. This creates a gap in developing models that perform reliably under local and real-world conditions. To address this, a dedicated traffic sign dataset was collected from Mysore, covering diverse road environments and varying conditions such as daylight, nighttime, and rainfall. The dataset captures the appearance, placement, and environmental variations of traffic signs encountered on Mysore roads. Working with a locally collected dataset enables the study of classification performance under realistic regional conditions. This also provides a foundation for developing and evaluating robust traffic sign classification methods specifically suited to real-world Indian road scenarios.
+Traffic sign recognition is an important component of intelligent transportation systems and road safety applications. However, many existing datasets are collected under controlled conditions or from regions with different road environments and traffic sign characteristics. This creates a gap in developing models that perform reliably under local and real-world conditions.
 
+To address this, a dedicated traffic sign dataset was collected from **Mysuru, Karnataka, India**, covering diverse road environments and varying environmental conditions such as daylight, nighttime, and rainfall. The dataset captures the appearance, placement, and environmental variations of traffic signs encountered on roads in Mysuru.
 
+Working with a locally collected dataset enables the study of traffic sign classification performance under realistic regional conditions. It also provides a foundation for developing and evaluating robust traffic sign classification methods specifically suited to real-world Indian road scenarios.
 
-This project focuses on **four handcrafted feature extractors** against **four classical machine-learning classifiers** for image classification, evaluated with **5-fold cross-validation** across **six image resolutions**.
+This project focuses on **four handcrafted feature extraction techniques** combined with **four classical machine-learning classifiers**. The experiments are conducted using **5-fold validation** across **six different image resolutions**, allowing the effect of feature representation, classifier selection, and image resolution on traffic sign classification performance to be investigated.
 
 ---
 
-## Directory Structure
+## Dataset
 
+### Dataset Collection
+
+The dataset consists of **4,595 traffic sign images** collected from different locations across the city of **Mysuru**.
+
+The images were collected under diverse real-world environmental conditions, including:
+
+- Daylight conditions
+- Nighttime conditions
+- Rainy conditions
+- Different road environments
+- Different viewing angles and sign placements
+- Variations in background and surrounding objects
+
+Unlike datasets consisting only of isolated traffic signs, an individual image in this dataset **may contain one or more traffic signs/symbols**. This allows the dataset to represent more realistic traffic scenarios encountered on roads.
+
+The original images can have **different image dimensions**, as they were collected from real-world sources rather than being captured at a fixed resolution.
+
+### Annotation
+
+The 4,595 original images were manually annotated using **LabelImg**.
+
+For every annotated image, a corresponding **XML annotation file** was generated containing the bounding-box information and class labels of the traffic signs present in the image.
+
+The original images and their corresponding XML annotation files can be accessed from the following locations:
+
+**Original Images:**  
+`[LINK TO ORIGINAL IMAGES]`
+
+**XML Annotations:**  
+`[LINK TO XML ANNOTATIONS]`
+
+### Image Cropping
+
+Since an image may contain one or more traffic signs, the annotated bounding boxes were used to extract individual traffic-sign regions from the original images.
+
+A dedicated cropping script was developed to:
+
+1. Read each original image.
+2. Locate its corresponding XML annotation file.
+3. Extract the bounding-box coordinates of each annotated traffic sign.
+4. Crop each traffic sign from the original image.
+5. Organize the cropped images according to their respective traffic sign classes.
+
+The cropping code used to generate the individual traffic-sign images is provided at:
+
+**Cropping Code:**  
+`[LINK TO CROPPING CODE]`
+
+The cropping process resulted in approximately **14,562 individual traffic-sign images** from the original 4,595 images.
+
+The resulting dataset contains **24 traffic sign classes**.
+
+### Dataset Class Distribution
+
+The class-wise distribution of the resulting **14,562 cropped traffic-sign images** is shown below.
+
+[Dataset Class Distribution]
+
+| Sl. No. | Class | Total |
+|--------:|-------------------------------|------:|
+| 1 | BikeParking | 60 |
+| 2 | CarParking | 81 |
+| 3 | EatingPlace | 24 |
+| 4 | GoSlow | 599 |
+| 5 | GoodsProhibited | 185 |
+| 6 | ImportantRoadAhead | 166 |
+| 7 | MajorRoadAhead | 2179 |
+| 8 | MedianRoadAhead | 1748 |
+| 9 | NarrowBridge | 156 |
+| 10 | NoLeftTurn | 255 |
+| 11 | NoParking | 245 |
+| 12 | NoParkingBothDirections | 180 |
+| 13 | NoRightTurn | 60 |
+| 14 | NoStraightAhead | 443 |
+| 15 | OneWay | 437 |
+| 16 | PedestrianCrossing | 2883 |
+| 17 | PedestrianCrossingGoSlow | 182 |
+| 18 | RightHandCurve | 504 |
+| 19 | RoadHumpAhead | 170 |
+| 20 | SchoolAhead | 158 |
+| 21 | SideRoadLeft | 1939 |
+| 22 | SpeedLimitForty | 616 |
+| 23 | UncontrolledIntersection | 1131 |
+| 24 | Uturn | 161 |
+| **Total** | | **14,562** |
+
+The class distribution demonstrates that the dataset is naturally imbalanced, with some traffic sign classes having substantially more samples than others. This class imbalance is retained during the experiments to reflect the distribution of traffic signs encountered during the data collection process.
+
+### Five-Fold Dataset
+
+The resulting **14,562 cropped traffic-sign images** were organized into a **5-fold dataset**.
+
+Each fold contains separate training and testing sets:
+
+```text
+Croped_5Fold/
+├── fold_1/
+│   ├── train/
+│   │   ├── BikeParking/
+│   │   ├── CarParking/
+│   │   ├── ...
+│   │   └── Uturn/
+│   └── test/
+│       ├── BikeParking/
+│       ├── CarParking/
+│       ├── ...
+│       └── Uturn/
+│
+├── fold_2/
+│   ├── train/
+│   └── test/
+│
+├── fold_3/
+│   ├── train/
+│   └── test/
+│
+├── fold_4/
+│   ├── train/
+│   └── test/
+│
+└── fold_5/
+    ├── train/
+    └── test/
+
+
+```
+## Directory Structure
 ```
 Traffic_Sign_Classification/
 ├── README.md                        ← this file
