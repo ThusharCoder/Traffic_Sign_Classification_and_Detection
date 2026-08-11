@@ -1,10 +1,10 @@
-# Image Classification with Handcrafted Features & Classical ML
+# Image Classification with Handcrafted Features & Features
 
 This project benchmarks **four handcrafted feature descriptors** against **four classical machine-learning classifiers** for image classification, evaluated with **5-fold cross-validation** across **six image resolutions**.
 
 ---
 
-## Directory Structure.
+## Directory Structure
 
 ```
 thushar_sir_project/
