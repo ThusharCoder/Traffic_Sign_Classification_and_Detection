@@ -1,0 +1,5 @@
+cd C:\Users\USER\Downloads\thushar_sir_project
+@'
+.ipynb_checkpoints/
+*_Results.csv
+'@ | Out-File -Encoding utf8 .gitignore

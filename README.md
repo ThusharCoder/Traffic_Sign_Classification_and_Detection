@@ -4,7 +4,7 @@ This project benchmarks **four handcrafted feature descriptors** against **four 
 
 ---
 
-## Directory Structure
+## Directory Structure.
 
 ```
 thushar_sir_project/
