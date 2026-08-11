@@ -1,6 +1,10 @@
 # Image Classification with Handcrafted Features & Classifiers
 
-This project benchmarks **four handcrafted feature descriptors** against **four classical machine-learning classifiers** for image classification, evaluated with **5-fold cross-validation** across **six image resolutions**.
+Traffic sign recognition is an important component of intelligent transportation systems and road safety applications. However, many existing datasets are collected under controlled conditions or from regions with different road environments and traffic sign characteristics. This creates a gap in developing models that perform reliably under local and real-world conditions. To address this, a dedicated traffic sign dataset was collected from Mysore, covering diverse road environments and varying conditions such as daylight, nighttime, and rainfall. The dataset captures the appearance, placement, and environmental variations of traffic signs encountered on Mysore roads. Working with a locally collected dataset enables the study of classification performance under realistic regional conditions. This also provides a foundation for developing and evaluating robust traffic sign classification methods specifically suited to real-world Indian road scenarios.
+
+
+
+This project focuses on **four handcrafted feature extractors** against **four classical machine-learning classifiers** for image classification, evaluated with **5-fold cross-validation** across **six image resolutions**.
 
 ---
 
