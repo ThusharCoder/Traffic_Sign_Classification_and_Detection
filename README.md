@@ -1,4 +1,4 @@
-# Image Classification with Handcrafted Features & Features
+# Image Classification with Handcrafted Features & Classifiers
 
 This project benchmarks **four handcrafted feature descriptors** against **four classical machine-learning classifiers** for image classification, evaluated with **5-fold cross-validation** across **six image resolutions**.
 
