@@ -60,15 +60,16 @@ The cropping code used to generate the individual traffic-sign images is provide
 **Cropping Code:**  
 `[LINK TO CROPPING CODE]`
 
-The cropping process resulted in approximately **14,562 individual traffic-sign images** from the original 4,595 images.
+The cropping process resulted in approximately **11,166 individual traffic-sign images** from the original 4,595 images.
 
-The resulting dataset contains **24 traffic sign classes**.
+The resulting dataset contains **16 traffic sign classes**, but other classes are added to it and a total 
+of **14,562** images were created which spread over 24 different classses and the class wise distribution is 
+shown below.
 
 ### Dataset Class Distribution
 
 The class-wise distribution of the resulting **14,562 cropped traffic-sign images** is shown below.
 
-[Dataset Class Distribution]
 
 | Sl. No. | Class | Total |
 |--------:|-------------------------------|------:|
@@ -138,6 +139,7 @@ Croped_5Fold/
 
 
 ```
+# Machine Learning feature Extraction algorithms and classifiers
 ## Directory Structure
 ```
 Traffic_Sign_Classification/
@@ -192,9 +194,9 @@ Each subfolder holds one notebook per feature-classifier combination (16 experim
 
 ---
 
-## Experimental Protocol (common to all notebooks)
+## Experimental Protocol
 
-- **Dataset**: expected at `E:\THUSHAR\DATASET\Croped_5Fold` (set by `baseDir` inside each notebook) with the layout:
+- **Dataset**: The notebooks use the `Croped_5Fold` dataset. The dataset path is configured using the `baseDir` variable inside each notebook. Users should update `baseDir` to the location of the dataset on their own system.
 
   ```
   Croped_5Fold/
