@@ -11,7 +11,7 @@ This project focuses on **four handcrafted feature extractors** against **four c
 ## Directory Structure
 
 ```
-thushar_sir_project/
+Traffic_Sign_Classification/
 ├── README.md                        ← this file
 ├── Gabor+classiifers/               ← Gabor filter-bank features
 │   ├── Gabor + SVM.ipynb
