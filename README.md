@@ -134,6 +134,7 @@ The class distribution demonstrates that the dataset is naturally imbalanced, wi
 ### Five-Fold Dataset
 
 The final **14,562-image dataset** was organized into **five folds**, with each fold containing separate training and testing subsets. Each fold is evaluated independently, and the results from all five folds are used to obtain the overall performance.
+**5-Fold Cross Validation means we split dataset into 5 parts. We train 5 times and test 5 times. This gives us an unbiased accuracy score instead of relying on just one train-test.**
 
 Each fold contains separate training and testing sets:
 
