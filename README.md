@@ -250,6 +250,22 @@ Each subfolder holds one notebook per feature-classifier combination (16 experim
 - **Metrics**: accuracy, precision, recall, and F1 — both **weighted** and **macro** averages.
 - **Visualization**: a confusion-matrix heatmap per (image size, fold) run.
 
+
+## Results and Performance Analysis
+
+The proposed ensemble classifier was evaluated against the individual baseline classifiers at an image resolution of 64 × 64 pixels. The ensemble combines SVM, Random Forest, and Gradient Boosting using soft voting.
+
+The comparison highlights the improvement achieved by the proposed ensemble across macro-averaged, weighted, and overall accuracy metrics.
+
+![Proposed Ensemble Improvement vs Baseline Classifiers](Result.png)
+
+### Ensemble Improvement at 64 × 64 Pixels
+
+The results show that the proposed ensemble provides the most notable improvements when compared with Gradient Boosting, particularly across the macro-averaged metrics. Compared with SVM and Random Forest, the improvements are smaller, indicating that these classifiers already provide relatively competitive individual performance.
+
+The visualization summarizes the percentage improvement of the proposed ensemble over each baseline classifier across the evaluated performance metrics.
+
+
 ## Outputs
 
 Each notebook writes two CSV files to its working directory:
