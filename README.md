@@ -60,15 +60,45 @@ The cropping code used to generate the individual traffic-sign images is provide
 **Cropping Code:**  
 `[LINK TO CROPPING CODE]`
 
-The cropping process resulted in approximately **11,166 individual traffic-sign images** from the original 4,595 images.
+The cropping process generated approximately **11,166 individual traffic-sign images** from the original **4,595 images**.
 
-The resulting dataset contains **16 traffic sign classes**, but other classes are added to it and a total 
-of **14,562** images were created which spread over 24 different classses and the class wise distribution is 
-shown below.
+These cropped images initially represented **16 traffic sign classes**.
+
+To extend the classification dataset and increase the number of traffic sign categories, additional traffic sign classes and their corresponding images were incorporated into the dataset. After incorporating additional traffic sign classes and corresponding images, the final classification dataset consisted of **14,562 images distributed across 24 classes**.
+
+Thus, the dataset development process can be summarized as:
+
+```text
+4,595 Original Images
+        │
+        ▼
+Manual Annotation using LabelImg
+        │
+        ▼
+XML Bounding-Box Annotations
+        │
+        ▼
+Bounding-Box Based Cropping
+        │
+        ▼
+11,166 Cropped Images
+        │
+        │  Initial 16 Classes
+        ▼
+Additional Traffic Sign Classes
+and Corresponding Images Added
+        │
+        ▼
+14,562 Final Images
+        │
+        │  24 Classes
+        ▼
+5-Fold Dataset
+```
 
 ### Dataset Class Distribution
 
-The class-wise distribution of the resulting **14,562 cropped traffic-sign images** is shown below.
+The class-wise distribution of the final **14,562-image classification dataset**, consisting of **24 traffic sign classes**, is shown below.
 
 
 | Sl. No. | Class | Total |
@@ -103,7 +133,7 @@ The class distribution demonstrates that the dataset is naturally imbalanced, wi
 
 ### Five-Fold Dataset
 
-The resulting **14,562 cropped traffic-sign images** were organized into a **5-fold dataset**.
+The final **14,562-image dataset** was organized into **five folds**, with each fold containing separate training and testing subsets. Each fold is evaluated independently, and the results from all five folds are used to obtain the overall performance.
 
 Each fold contains separate training and testing sets:
 
@@ -136,9 +166,16 @@ Croped_5Fold/
 └── fold_5/
     ├── train/
     └── test/
-
-
 ```
+
+---
+
+## Overall System Workflow
+
+![Overall System Workflow](Overall_Module_Vice_Workflow.jpeg)
+
+The flowchart illustrates the complete module-level workflow of the traffic sign classification system, from the final five-fold dataset through image preprocessing, handcrafted feature extraction, classical machine-learning classification, and performance evaluation.
+
 # Machine Learning feature Extraction algorithms and classifiers
 ## Directory Structure
 ```
