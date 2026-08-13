@@ -35,13 +35,13 @@ The 4,595 original images were manually annotated using **LabelImg**.
 
 For every annotated image, a corresponding **XML annotation file** was generated containing the bounding-box information and class labels of the traffic signs present in the image.
 
-The original images and their corresponding XML annotation files can be accessed from the following locations:
+The original images and their corresponding XML annotation files can be accessed from the following links:
 
-**Original Images:**  
-`[LINK TO ORIGINAL IMAGES]`
+**Original Images:**
+https://www.kaggle.com/datasets/thusharharikrishna/multiple-traffic-signs-mysuru-karnataka-india/data?select=Multiple_Images_Traffic_Sign_Dataset_Mysuru
 
-**XML Annotations:**  
-`[LINK TO XML ANNOTATIONS]`
+**XML Annotations:**
+https://www.kaggle.com/datasets/thusharharikrishna/multiple-traffic-signs-mysuru-karnataka-india/data?select=Multiple_Images_Traffic_Sign_Dataset_Mysuru
 
 ### Image Cropping
 
@@ -58,7 +58,7 @@ A dedicated cropping script was developed to:
 The cropping code used to generate the individual traffic-sign images is provided at:
 
 **Cropping Code:**  
-`[LINK TO CROPPING CODE]`
+https://www.kaggle.com/datasets/thusharharikrishna/multiple-traffic-signs-mysuru-karnataka-india/data?select=Multiple_Images_Traffic_Sign_Dataset_Mysuru
 
 The cropping process generated approximately **11,166 individual traffic-sign images** from the original **4,595 images**.
 
