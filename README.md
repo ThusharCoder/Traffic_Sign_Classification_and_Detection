@@ -1,4 +1,4 @@
-# Image Classification using Handcrafted Features & Classical Machine Learning.
+# Image Classification using Handcrafted Features & Classical Machine Learning
 
 Traffic sign recognition is an important component of intelligent transportation systems and road safety applications. However, many existing datasets are collected under controlled conditions or from regions with different road environments and traffic sign characteristics. This creates a gap in developing models that perform reliably under local and real-world conditions.
 
